@@ -1,6 +1,6 @@
 GitFast
 =======
-Accelerate your use of Git with some aliases
+![thumbnail](https://github.com/Mr21/GitFast/blob/master/git.png)
 
 | Alias      | Commandes  |
 |------------|------------|
