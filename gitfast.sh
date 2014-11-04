@@ -35,7 +35,7 @@ gf_checkout() {
 gf_commit() {
 	if [[ $1 ]]; then m=$1
 	             else m='...'; fi
-	git commit -m "$m" > /dev/null && gf_logFull -1
+	git commit -m "$m" > /dev/null && gf_log -1
 	gf__status
 }
 gf_status() {
@@ -48,7 +48,7 @@ gf_diff() {
 }
 gf_log() {
 	gf__clear
-	git shortlog
+	git log --oneline $1
 }
 gf_logFull() {
 	gf__clear
