@@ -1,6 +1,7 @@
 GitFast
 =======
-![thumbnail](https://github.com/Mr21/GitFast/blob/master/git.png)
+
+![thumbnail](https://github.com/Mr21/GitFast/blob/master/thumbnail.jpg)
 
 | Alias      | Commandes  |
 |------------|------------|
