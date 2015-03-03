@@ -1,7 +1,7 @@
 GitFast
 =======
 
-![thumbnail](https://mr21.github.io/GitFast/thumbnail.jpg)
+![thumbnail](https://mr21.github.io/gitfast/thumbnail.jpg)
 
 <table>
 <thead>
