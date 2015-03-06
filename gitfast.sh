@@ -27,6 +27,12 @@ gf_add() {
 	gf__clear
 	gf__status
 }
+gf_addP() {
+	gf__clear
+	git add -p "$@"
+	gf__clear
+	gf__status
+}
 gf_checkout() {
 	if [[ $1 ]]; then git checkout "$@"; fi
 	gf__clear
@@ -79,6 +85,7 @@ gf_resetHead() {
 # aliases
 alias gbr=gf_branch
 alias gad=gf_add
+alias gap=gf_addP
 alias gco=gf_checkout
 alias gci=gf_commit
 alias gst=gf_status
