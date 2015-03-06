@@ -1,5 +1,5 @@
 #!/bin/bash
-# github.com/Mr21/GitFast
+# https://github.com/Mr21/gitfast
 
 # conf
 gf__clear_active=true
@@ -22,13 +22,13 @@ gf_branch() {
 	git branch
 }
 gf_add() {
-	if [[ $1 ]]; then git add $1
+	if [[ $1 ]]; then git add "$@"
 	             else git add -A; fi
 	gf__clear
 	gf__status
 }
 gf_checkout() {
-	if [[ $1 ]]; then git checkout $1; fi
+	if [[ $1 ]]; then git checkout "$@"; fi
 	gf__clear
 	gf__status
 }
@@ -44,15 +44,15 @@ gf_status() {
 }
 gf_diff() {
 	gf__clear
-	git diff $1
+	git diff "$@"
 }
 gf_log() {
 	gf__clear
-	git log --oneline $1
+	git log --oneline "$@"
 }
 gf_logFull() {
 	gf__clear
-	git log --stat $1
+	git log --stat "$@"
 }
 gf_pull() {
 	gf__clear
@@ -60,7 +60,7 @@ gf_pull() {
 }
 gf_push() {
 	gf__clear
-	git push $1
+	git push "$@"
 	gf__status
 }
 gf_pushForce() {
