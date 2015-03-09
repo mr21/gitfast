@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GitFast</title>
+	<meta charset="UTF-8"/>
+	<meta property="og:title"       content="GitFast"/>
+	<meta property="og:url"         content="https://mr21.github.io/gitfast/"/>
+	<meta property="og:image"       content="https://mr21.github.io/gitfast/thumbnail.jpg"/>
+	<meta property="og:description" content="gitfast.sh is a Bash shell script file offering many intelligent aliases to accelerate the use of Git on the command line."/>
+	<link rel="stylesheet" href="../_/fa/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="../_/header.css"/>
+	<link rel="stylesheet" href="style.css"/>
+	<script src="../_/jquery.min.js"></script>
+	<script src="../_/header.js"></script>
+	<style>
+	table {
+		margin: 35px auto 0;
+		border-collapse: collapse;
+		}
+		thead {
+			text-align: center;
+			font-weight: bold;
+			}
+		td {
+			padding: 8px 15px;
+			vertical-align: top;
+			}
+		tbody td {
+			border: 1px solid #555;
+			}
+		code {
+			display: block;
+			white-space: pre;
+			}
+			code:before {
+				content: "$>\A0";
+				opacity: .3;
+				}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<i class="fa fa-fw fa-git-square"></i>
+		<h1>GitFast - 1.1</h1>
+	</div>
+
+	<table>
+		<thead>
+			<tr>
+				<td>
+					Aliases
+				</td><td>
+					Git equivalent
+				</td>
+			</tr>
+		</thead><tbody>
+			<tr>
+				<td>
+					<code>gst</code>
+				</td><td>
+					<code>git status</code>
+				</td>
+			</tr><tr>
+				<td>
+					<code>gad <i>file</i></code>
+					<code>gad</code>
+					<code>gap</code>
+				</td><td>
+					<code>git add <i>file</i> ; git status</code>
+					<code>git add -A   ; git status</code>
+					<code>git add -p   ; git status</code>
+				</td>
+			</tr><tr>
+				<td>
+					<code>gbr</code>
+					<code>gbr <i>branch</i></code>
+				</td><td>
+					<code>git branch</code>
+					<code>git checkout <i>branch</i> ; git branch</code>
+				</td>
+			</tr><tr>
+				<td>
+					<code>gps</code>
+					<code>gpf</code>
+					<code>gpl</code>
+				</td><td>
+					<code>git push</code>
+					<code>git push -f</code>
+					<code>git pull</code>
+				</td>
+			</tr><tr>
+				<td>
+					<code>gls</code>
+					<code>glf</code>
+				</td><td>
+					<code>git shortlog</code>
+					<code>git log --stat</code>
+				</td>
+			</tr><tr>
+				<td>
+					<code>gdf</code>
+					<code>gdf <i>file</i></code>
+				</td><td>
+					<code>git diff</code>
+					<code>git diff <i>file</i></code>
+				</td>
+			</tr><tr>
+				<td>
+					<code>gco</code>
+					<code>gci</code>
+					<code>gci "<i>message</i>"</code>
+				</td><td>
+					<code>git checkout</code>
+					<code>git commit -m "..."</code>
+					<code>git commit -m "<i>message</i>"</code>
+				</td>
+			</tr><tr>
+				<td>
+					<code>grh</code>
+					<code>grh <i>1</i></code>
+					<code>grh <i>2</i></code>
+				</td><td>
+					<code>git reset HEAD</code>
+					<code>git reset HEAD^</code>
+					<code>git reset HEAD^^</code>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
