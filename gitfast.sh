@@ -1,12 +1,16 @@
 #!/bin/bash
 # https://github.com/Mr21/gitfast
 
-# conf
-gf__clear_active=true
+###########################################################
+###########################################################
 
-# private functions
+# private :
+
+gf__clear_active=true
 gf__clear() {
-	if [[ $gf__clear_active = true ]]; then clear; fi
+	if [[ $gf__clear_active = true ]]; then
+		clear
+	fi
 }
 gf__status() {
 	b=`git symbolic-ref HEAD --short`
@@ -15,12 +19,51 @@ gf__status() {
 	git status --short
 }
 
-# alias functions
-gf_branch() {
-	if [[ $1 ]]; then git checkout $1; fi
+###########################################################
+###########################################################
+
+# gbl : git branch listing
+# gbs : git branch selection
+# gbn : git branch new
+
+gf_branch_listing() {
 	gf__clear
-	git branch
+	if [[ -z $1 ]]; then
+		\git branch
+	else
+		\git branch | \grep $1 | \sed 's/..\(.*\)/\1/'
+	fi
 }
+alias gbs=gf_branch_listing
+
+gf_branch_selection() {
+	if [[ $1 ]]; then
+		branch=`\git branch | \grep $1 | \head -n 1 | \sed 's/..\(.*\)/\1/'`
+		if [[ -z $branch ]]; then
+			gf__clear
+			\git branch
+		else
+			\git checkout $branch &&
+			gf__clear &&
+			\git branch
+		fi
+	fi
+}
+alias gbs=gf_branch_selection
+
+gf_branch_new() {
+	gf__clear
+	if [[ $1 ]]; then
+		\git checkout -b "$1" &&
+		gf__clear &&
+		\git branch
+	fi
+}
+alias gbn=gf_branch_new
+
+###########################################################
+###########################################################
+
 gf_add() {
 	if [[ $1 ]]; then git add "$@"
 	             else git add -A; fi
@@ -82,8 +125,6 @@ gf_resetHead() {
 	gf__status
 }
 
-# aliases
-alias gbr=gf_branch
 alias gad=gf_add
 alias gap=gf_addP
 alias gco=gf_checkout
