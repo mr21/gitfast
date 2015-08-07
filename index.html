@@ -26,6 +26,7 @@
 			width: 100%;
 			margin-top: 30px;
 			border-collapse: collapse;
+			font: 14px monospace;
 			}
 			thead {
 				font-weight: bold;
@@ -51,7 +52,7 @@
 <body>
 	<div id="header">
 		<i class="fa fa-fw fa-git-square"></i>
-		<h1>GitFast - 1.1</h1>
+		<h1>GitFast</h1>
 	</div>
 
 	<div class="global">
@@ -67,7 +68,7 @@
 					<td>
 						Aliases
 					</td><td>
-						Git equivalent
+						Descriptions
 					</td>
 				</tr>
 			</thead><tbody>
@@ -89,11 +90,15 @@
 					</td>
 				</tr><tr>
 					<td>
-						<code>gbr</code>
-						<code>gbr <i>branch</i></code>
+						<code>gbl</code>
+						<code>gbl <i>xxx</i></code>
+						<code>gbs <i>xxx</i></code>
+						<code>gbn <i>xxx</i></code>
 					</td><td>
-						<code>git branch</code>
-						<code>git checkout <i>branch</i> ; git branch</code>
+						List all the branches.<br/>
+						List all the branches who contains <i>xxx</i>.<br/>
+						Checkout a branch who contains <i>xxx</i>.<br/>
+						Create a new branch with the name <i>xxx</i>.
 					</td>
 				</tr><tr>
 					<td>
