@@ -34,7 +34,7 @@ gf_branch_listing() {
 		\git branch | \grep $1 | \sed 's/..\(.*\)/\1/'
 	fi
 }
-alias gbs=gf_branch_listing
+alias gbl=gf_branch_listing
 
 gf_branch_selection() {
 	if [[ $1 ]]; then
