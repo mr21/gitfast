@@ -7,7 +7,7 @@
 
 # private :
 
-gf__clear_active=true
+gf__clear_active=false
 gf__clear() {
 	if [[ $gf__clear_active = true ]]; then
 		clear
