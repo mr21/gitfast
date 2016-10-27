@@ -132,6 +132,7 @@ alias gco=gf_checkout
 alias gci=gf_commit
 alias gst=gf_status
 alias gdf=gf_diff
+alias gdfs='gf_diff --staged'
 alias gls=gf_log
 alias glf=gf_logFull
 alias gpl=gf_pull
